@@ -75,14 +75,14 @@ class EventPageState extends State<EventPage> {
                               Expanded(
                                 flex: 2,
                                 child: Text(
-                                  _events[index]['organiser'].toString(),
+                                  _events[index]['subject'].toString(),
                                   style: TextStyle(fontSize: 17, fontFamily: 'UbuntuMono',fontWeight: FontWeight.w600,),
                                 ),
                               ),
                               Expanded(
                                 flex: 1,
                                 child: Text(
-                                  _events[index]['description'].toString(),
+                                  _events[index]['Day'].toString(),
                                   style: TextStyle(
                                       fontSize: 14, color: Colors.grey),
                                 ),
@@ -96,7 +96,7 @@ class EventPageState extends State<EventPage> {
                             child: Align(
                               alignment: Alignment(0, 0),
                               child: Text(
-                                _events[index]['date'].toString(),
+                                _events[index]['start'].toString(),
                                 style: TextStyle(color: Colors.blue, fontSize: 12, fontFamily: 'UbuntuMono',fontWeight: FontWeight.w600,),
                               ),
                             ),
@@ -121,7 +121,7 @@ class EventPageState extends State<EventPage> {
     });
 
 //    String link = "http://"+widget.url+"/hr/meetinglist";
-    String link = "https://feeds.citibikenyc.com/stations/stations.json";
+    String link = "http://192.168.43.239:8000/classesList/?class="+widget.url;
     http.Response response = await http.get(
       link,
     );
@@ -190,7 +190,7 @@ class EventPageState extends State<EventPage> {
       },
     ];
 
-    _events = _events2;
+    _events = list;
     setState(() {
       isloading = false;
     });

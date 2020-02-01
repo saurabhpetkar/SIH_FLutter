@@ -120,57 +120,7 @@ class BuildingPageState extends State<BuildingPage> {
                         floor == FloorMode.first ? first_hori() : second_hori(),
                   ),
                   Positioned(
-                    child: Container(
-//                height: 260,
-                      child: Column(
-                        children: <Widget>[
-                          GestureDetector(
-                            child: Box(90, 60, "107", Colors.grey),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        EventPage("107", "url")),
-                              );
-                            },
-                          ),
-                          GestureDetector(
-                            child: Box(90, 62, "105", Colors.grey),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        EventPage("105", "url")),
-                              );
-                            },
-                          ),
-                          GestureDetector(
-                            child: Box(90, 62, "103", Colors.grey),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        EventPage("103", "url")),
-                              );
-                            },
-                          ),
-                          GestureDetector(
-                            child: Box(90, 62, "101", Colors.grey),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        EventPage("101", "url")),
-                              );
-                            },
-                          ),
-                        ],
-                      ),
-                    ),
+                    child: floor == FloorMode.first ? first_ver() : second_ver(),
                     left: 5,
                     bottom: 10,
                   ),
@@ -211,7 +161,7 @@ class BuildingPageState extends State<BuildingPage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => EventPage("113", "url"),
+                                  builder: (context) => EventPage("113", "113"),
                                 ),
                               );
                             },
@@ -345,7 +295,7 @@ class BuildingPageState extends State<BuildingPage> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => EventPage("115", "url")),
+              MaterialPageRoute(builder: (context) => EventPage("115", "113")),
             );
           },
         ),
@@ -354,7 +304,7 @@ class BuildingPageState extends State<BuildingPage> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => EventPage("113", "url")),
+              MaterialPageRoute(builder: (context) => EventPage("113", "113")),
             );
           },
         ),
@@ -364,7 +314,7 @@ class BuildingPageState extends State<BuildingPage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => EventPage("Library", "url")),
+                  builder: (context) => EventPage("Library", "113")),
             );
           },
         ),
@@ -374,7 +324,7 @@ class BuildingPageState extends State<BuildingPage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => EventPage("Registrar", "url")),
+                  builder: (context) => EventPage("Registrar", "113")),
             );
           },
         ),
@@ -390,7 +340,7 @@ class BuildingPageState extends State<BuildingPage> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => EventPage("213", "url")),
+              MaterialPageRoute(builder: (context) => EventPage("213", "113")),
             );
           },
         ),
@@ -399,7 +349,7 @@ class BuildingPageState extends State<BuildingPage> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => EventPage("215", "url")),
+              MaterialPageRoute(builder: (context) => EventPage("215", "113")),
             );
           },
         ),
@@ -408,7 +358,7 @@ class BuildingPageState extends State<BuildingPage> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => EventPage("Lab", "url")),
+              MaterialPageRoute(builder: (context) => EventPage("Lab", "113")),
             );
           },
         ),
@@ -418,13 +368,122 @@ class BuildingPageState extends State<BuildingPage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => EventPage("Academic Office", "url")),
+                  builder: (context) => EventPage("Academic Office", "113")),
             );
           },
         ),
       ],
     );
   }
+
+  Widget first_ver(){
+    return Container(
+//                height: 260,
+      child: Column(
+        children: <Widget>[
+          GestureDetector(
+            child: Box(90, 60, "107", Colors.grey),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        EventPage("107", "113")),
+              );
+            },
+          ),
+          GestureDetector(
+            child: Box(90, 62, "105", Colors.grey),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        EventPage("105", "113")),
+              );
+            },
+          ),
+          GestureDetector(
+            child: Box(90, 62, "103", Colors.grey),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        EventPage("103", "113")),
+              );
+            },
+          ),
+          GestureDetector(
+            child: Box(90, 62, "101", Colors.grey),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        EventPage("101", "113")),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget second_ver(){
+    return Container(
+//                height: 260,
+      child: Column(
+        children: <Widget>[
+          GestureDetector(
+            child: Box(90, 60, "209", Colors.grey),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        EventPage("209", "113")),
+              );
+            },
+          ),
+          GestureDetector(
+            child: Box(90, 62, "207", Colors.grey),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        EventPage("207", "113")),
+              );
+            },
+          ),
+          GestureDetector(
+            child: Box(90, 62, "205", Colors.grey),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        EventPage("205", "113")),
+              );
+            },
+          ),
+          GestureDetector(
+            child: Box(90, 62, "201", Colors.grey),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        EventPage("201", "113")),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
 
   Widget SmallBox(double width, double height) {
     return Container(
